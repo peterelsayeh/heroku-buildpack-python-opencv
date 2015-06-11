@@ -341,11 +341,6 @@ if [ ! -f ${cache_target} ]; then
   rm -r samples
   rm -r apps
   rm README.md
-  rm -r ../cmake-2.8.10.2/Tests
-  rm -r ../cmake-2.8.10.2/Testing
-  rm -r ../cmake-2.8.10.2/Example
-  rm -r ../cmake-2.8.10.2/Docs
-  rm -r ../cmake-2.8.10.2/Source
   
   mkdir build
   cd build
