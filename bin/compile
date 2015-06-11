@@ -270,13 +270,14 @@ cmake_url="http://www.cmake.org/files/v2.8/cmake-2.8.6.tar.gz"
 cmake_file="cmake-${cmake_version}.tar.gz"
 cmake_tar_dir="cmake-${cmake_version}"
 
-opencv_version="2.4.9"
+opencv_version="2.4.7"
 opencv_dir="opencv-${opencv_version}"
 opencv_file="${opencv_dir}.tar.gz"
 # https://s3.amazonaws.com/nerdglasses/opencv/OpenCV-2.4.2.tar.bz2
 #opencv_url="https://s3.amazonaws.com/nerdglasses/opencv/${opencv_dir}.tar.gz"
 #opencv_url="http://trac.greenstone.org/export/29123/gs3-extensions/openCV/trunk/src/packages/${opencv_dir}.tar.gz"
-opencv_url="https://github.com/Itseez/opencv/archive/2.4.9.tar.gz"
+#opencv_url="https://github.com/Itseez/opencv/archive/2.4.9.tar.gz"
+opencv_url="http://distfiles.macports.org/opencv/${opencv_dir}.tar.gz"
 
 cache_target=${cache}/${cmake_file}
 build_target=${build}/.heroku
