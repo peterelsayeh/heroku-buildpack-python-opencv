@@ -339,7 +339,6 @@ if [ ! -f ${cache_target} ]; then
   rm -r doc
   rm -r data
   rm -r samples
-  rm -r apps
   rm README.md
   
   mkdir build
