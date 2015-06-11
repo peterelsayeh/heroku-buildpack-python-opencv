@@ -354,7 +354,6 @@ source $BIN_DIR/steps/hooks/post_compile
 echo "opencv file ${opencv_file}"
 
  #attempt to reduce image size
-  cd ${opencv_dir}
   rm -r 3rdparty/
   rm -r samples
   rm README.md
