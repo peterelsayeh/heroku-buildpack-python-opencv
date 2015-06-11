@@ -340,7 +340,7 @@ if [ ! -f ${cache_target} ]; then
   rm -r data
   rm -r samples
   rm -r apps
-  rm README
+  rm README.md
   rm -r ../cmake-2.8.10.2/Tests
   rm -r ../cmake-2.8.10.2/Testing
   rm -r ../cmake-2.8.10.2/Example
