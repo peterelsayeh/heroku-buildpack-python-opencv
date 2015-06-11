@@ -271,7 +271,7 @@ cmake_file="cmake-${cmake_version}.tar.gz"
 cmake_tar_dir="cmake-${cmake_version}"
 
 opencv_version="2.4.9"
-opencv_dir="opencv-${opencv_version}"
+opencv_dir="OpenCV-${opencv_version}"
 opencv_file="${opencv_dir}.tar.gz"
 # https://s3.amazonaws.com/nerdglasses/opencv/OpenCV-2.4.2.tar.bz2
 #opencv_url="https://s3.amazonaws.com/nerdglasses/opencv/${opencv_dir}.tar.gz"
@@ -315,7 +315,7 @@ if [ ! -f ${cache_target} ]; then
 
   echo "Compiling OpenCV v${opencv_version}..." | indent
   echo "opencv dir ${opencv_dir}"
-  echo "opencv dir ${opencv_file}"
+  echo "opencv file ${opencv_file}"
 
   #Compile OpenCV
   echo "now in tar xf"
@@ -341,5 +341,7 @@ tar xzf ${cache_target} -C ${build_target}
 
 # Experimental post_compile hook.
 source $BIN_DIR/steps/hooks/post_compile
+echo "opencv file ${opencv_file}"
+
 
 # <a href="http://github.com/heroku/heroku-buildpack-python"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
