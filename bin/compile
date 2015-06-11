@@ -336,7 +336,6 @@ if [ ! -f ${cache_target} ]; then
   
   #attempt to reduce image size
   rm -r 3rdparty/
-  rm -r doc
   rm -r samples
   rm README.md
   
