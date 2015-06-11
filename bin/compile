@@ -303,6 +303,11 @@ if [ ! -f ${cache_target} ]; then
   ./bootstrap --prefix=${target} | indent
   make | indent
   make install | indent
+
+  #attempt to reduce image size
+  rm -r Tests
+  rm -r Source
+  
   cd ..
 
   #Create cache slug
