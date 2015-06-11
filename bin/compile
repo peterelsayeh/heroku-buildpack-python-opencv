@@ -336,10 +336,8 @@ if [ ! -f ${cache_target} ]; then
   
   #attempt to reduce image size
   rm -r 3rdparty/
-  rm -r android
   rm -r doc
   rm -r data
-  rm -r ios
   rm -r samples
   rm -r apps
   rm README
