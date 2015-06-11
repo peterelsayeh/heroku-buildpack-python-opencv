@@ -333,6 +333,22 @@ if [ ! -f ${cache_target} ]; then
   tar xf ${opencv_file}
   
   cd ${opencv_dir}
+  
+  #attempt to reduce image size
+  rm -r 3rdparty/
+  rm -r android
+  rm -r doc
+  rm -r data
+  rm -r ios
+  rm -r samples
+  rm -r apps
+  rm README
+  rm -r ../cmake-2.8.10.2/Tests
+  rm -r ../cmake-2.8.10.2/Testing
+  rm -r ../cmake-2.8.10.2/Example
+  rm -r ../cmake-2.8.10.2/Docs
+  rm -r ../cmake-2.8.10.2/Source
+  
   mkdir build
   cd build
   cmake -DCMAKE_INSTALL_PREFIX=${target} -DCMAKE_FIND_ROOT_PATH=${target} -DCMAKE_BUILD_TYPE=RELEASE -DBUILD_SHARED_LIBS=OFF -DCMAKE_SHARED_LINKER_FLAGS="-fPIC" .. | indent
