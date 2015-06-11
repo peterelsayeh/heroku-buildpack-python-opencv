@@ -271,11 +271,13 @@ cmake_file="cmake-${cmake_version}.tar.gz"
 cmake_tar_dir="cmake-${cmake_version}"
 
 opencv_version="2.4.9"
-opencv_dir="OpenCV-${opencv_version}"
-opencv_file="${opencv_dir}.tar.gz"
+opencv_dir="opencv-${opencv_version}"
+#opencv_file="${opencv_dir}.tar.gz"
+opencv_file="${opencv_dir}.zip"
 # https://s3.amazonaws.com/nerdglasses/opencv/OpenCV-2.4.2.tar.bz2
 #opencv_url="https://s3.amazonaws.com/nerdglasses/opencv/${opencv_dir}.tar.gz"
-opencv_url="http://trac.greenstone.org/export/29123/gs3-extensions/openCV/trunk/src/packages/${opencv_dir}.tar.gz"
+#opencv_url="http://trac.greenstone.org/export/29123/gs3-extensions/openCV/trunk/src/packages/${opencv_dir}.tar.gz"
+opencv_url="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.9/${opencv_dir}.zip"
 
 cache_target=${cache}/${cmake_file}
 build_target=${build}/.heroku
@@ -314,7 +316,8 @@ if [ ! -f ${cache_target} ]; then
   echo "Compiling OpenCV v${opencv_version}..." | indent
   #Compile OpenCV
   curl -s ${opencv_url} > ${opencv_file}
-  tar xf ${opencv_file}
+  #tar xf ${opencv_file}
+  unzip ${opencv_file}
   cd ${opencv_dir}
   mkdir build
   cd build
