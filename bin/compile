@@ -344,7 +344,6 @@ if [ ! -f ${cache_target} ]; then
   rm -r 3rdparty/
   rm -r samples
   rm README.md
-  rm -r 3rdparty/
   rm -r platforms
   rm -r doc
   rm -r data
